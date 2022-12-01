@@ -1,7 +1,10 @@
 import React, { useState } from "react";
+import { setProduct } from "../redux/slices/homeProduct";
+import { useSelector, useDispatch } from "react-redux";
 
 const Card = ({ d }) => {
-  const [latest, setLatest] = useState([]);
+  const latest = useSelector((state) => state.latestProduct.product);
+  const dispatch = useDispatch();
   return (
     <div className="card" key={d?.id}>
       <div className="picture-container">
@@ -13,7 +16,7 @@ const Card = ({ d }) => {
         <div className="title-container">
           <h1
             onClick={() => {
-              setLatest(d);
+              dispatch(setProduct(d));
             }}
             className="title-d"
           >{`${d?.title.substring(0, 66)}`}</h1>

@@ -10,6 +10,17 @@ main {
   font-size: 20px;
   color: black;
 }
+.title-container {
+  cursor: pointer;
+}
+.latest {
+  display: flex;
+  justify-content: center;
+  color: white;
+}
+.title-d:hover {
+  color: aqua;
+}
 
 .data {
   min-height: 49vh;
