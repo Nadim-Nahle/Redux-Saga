@@ -1,0 +1,151 @@
+main {
+  min-height: 100vh;
+  background: linear-gradient(to right top, #606362, #33393a);
+  display: flex;
+  justify-content: center;
+  flex-direction: row;
+  max-width: 100vw;
+}
+.title-d {
+  font-size: 20px;
+  color: black;
+}
+
+.data {
+  min-height: 49vh;
+  width: 1230px;
+
+  border-radius: 20px;
+  z-index: 2;
+  backdrop-filter: blur(20px);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-top: 60px;
+  margin-bottom: 60px;
+}
+.circle1,
+.circle2 {
+  background: white;
+  background: linear-gradient(
+    to right bottom,
+    rgba(255, 255, 255, 0.8),
+    rgba(255, 255, 255, 0.6)
+  );
+  height: 200px;
+  width: 200px;
+  position: absolute;
+  border-radius: 50%;
+}
+.circle1 {
+  top: 30%;
+  right: 1%;
+}
+.circle2 {
+  bottom: -7%;
+  left: 0%;
+}
+
+.cards {
+  padding-top: 5px;
+  display: flex;
+  flex-direction: column;
+  padding-bottom: 20px;
+}
+.card {
+  background: linear-gradient(
+    to left top,
+    rgb(255, 255, 255),
+    rgba(255, 255, 255)
+  );
+  margin: 20px 0px;
+  padding: 20px;
+  margin-bottom: 0px;
+  color: #000000;
+  width: 1100px;
+  height: 200px;
+  display: flex;
+  flex-wrap: wrap;
+  padding-bottom: 40px;
+}
+
+.picture-container {
+  flex-grow: 1;
+  width: 16%;
+  height: 100%;
+}
+
+.data-info-container {
+  flex-grow: 1;
+  width: 84%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  margin-top: 19px;
+}
+.data-info-container > div {
+  padding: 0px;
+}
+
+.data-picture {
+  width: 90%;
+  height: 105%;
+  margin-top: 5px;
+}
+.data-picture > img {
+  height: 100%;
+  width: 100%;
+}
+.description-container {
+  width: 895px;
+
+  display: flex;
+  align-items: center;
+  display: block; /* or inline-block */
+  text-overflow: ellipsis;
+  word-wrap: break-word;
+  overflow: hidden;
+  max-height: 3.6em;
+  line-height: 1.8em;
+}
+.price-container {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  width: 100%;
+  margin-top: 6px;
+  margin-bottom: 7px;
+}
+
+.price-title {
+  font-size: 18px;
+}
+.price-name {
+  font-size: 20px;
+}
+.category-container {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  font-size: 12px;
+}
+.flex-container {
+  display: flex;
+}
+.date-container {
+  margin-left: auto;
+  font-size: 17px;
+}
+.category-name {
+  font-weight: 350;
+}
+.price-name {
+  font-weight: 350;
+  font-size: 18px;
+}
+.flex {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
