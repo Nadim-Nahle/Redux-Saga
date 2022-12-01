@@ -12,7 +12,7 @@ const Home = () => {
           <h1 className="latest">Latest Product</h1>
           <div className="data">
             <div className="cards" id="card">
-              <Card d={latest} />
+              {latest ? <Card d={latest} /> : "no product"}
             </div>
           </div>
         </div>

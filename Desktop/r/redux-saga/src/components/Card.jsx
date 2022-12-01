@@ -1,9 +1,8 @@
 import React, { useState } from "react";
 import { setProduct } from "../redux/slices/homeProduct";
-import { useSelector, useDispatch } from "react-redux";
+import { useDispatch } from "react-redux";
 
 const Card = ({ d }) => {
-  const latest = useSelector((state) => state.latestProduct.product);
   const dispatch = useDispatch();
   return (
     <div className="card" key={d?.id}>
@@ -19,7 +18,7 @@ const Card = ({ d }) => {
               dispatch(setProduct(d));
             }}
             className="title-d"
-          >{`${d?.title.substring(0, 66)}`}</h1>
+          >{`${d?.title?.substring(0, 66)}`}</h1>
         </div>
         <div className="description-container">
           <p className="description">{d?.description}</p>

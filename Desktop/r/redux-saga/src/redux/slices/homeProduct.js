@@ -4,7 +4,7 @@ const initialState = {
     product: "",
 };
 
-export const latestProduct = createSlice({
+export const homeProduct = createSlice({
     name: "latestProduct",
     initialState,
     reducers: {
@@ -14,6 +14,6 @@ export const latestProduct = createSlice({
     },
 });
 
-export const { setProduct } = latestProduct.actions;
+export const { setProduct } = homeProduct.actions;
 
-export default latestProduct.reducer;
+export default homeProduct.reducer;
