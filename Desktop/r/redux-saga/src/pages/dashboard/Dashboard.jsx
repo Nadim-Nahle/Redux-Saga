@@ -2,19 +2,24 @@ import React, { useEffect, useState } from "react";
 import axios from "axios";
 import "./dashbaord.css";
 import Card from "../../components/Card";
+import { useDispatch, useSelector } from "react-redux";
+import { getProductsFetch } from "../../redux/slices/allProducts";
 
 const Dashboard = () => {
   const [productData, setProductData] = useState([]);
+  const products = useSelector((state) => state.products.products);
+  const dispatch = useDispatch();
 
-  const getData = async () => {
-    const response = await axios.get("https://fakestoreapi.com/products");
-    const data = response.data;
-    setProductData(data);
-  };
+  // const getData = async () => {
+  //   const response = await axios.get("https://fakestoreapi.com/products");
+  //   const data = response.data;
+  //   setProductData(data);
+  // };
 
   useEffect(() => {
-    getData();
-  }, []);
+    // getData();
+    dispatch(getProductsFetch());
+  }, [dispatch]);
 
   return (
     <>
@@ -22,7 +27,7 @@ const Dashboard = () => {
         <div className="flex">
           <div className="data">
             <div className="cards" id="card">
-              {productData?.map((d) => (
+              {products?.map((d) => (
                 <Card d={d} key={d.id} />
               ))}
             </div>

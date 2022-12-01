@@ -3,6 +3,7 @@ import { setProduct } from "../redux/slices/homeProduct";
 import { useDispatch } from "react-redux";
 
 const Card = ({ d }) => {
+  console.log(d);
   const dispatch = useDispatch();
   return (
     <div className="card" key={d?.id}>
