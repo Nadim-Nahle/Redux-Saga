@@ -1,0 +1,30 @@
+body {
+  margin: 0;
+  font-family: sans-serif;
+}
+
+code {
+  font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New",
+    monospace;
+}
+
+.navbar {
+  height: 50px;
+  display: flex;
+  background-color: #15172b;
+  color: white;
+  justify-content: center;
+  align-items: center;
+}
+.navbar > div {
+  background-color: #08d;
+  margin: 0 30px 0 30px;
+  border-radius: 7px;
+  cursor: pointer;
+  width: 6em;
+  height: 2.5em;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 15px;
+}
